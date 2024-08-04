@@ -1,104 +1,336 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
 <html lang="en">
+
 <head>
-  <title>Eric Lehman</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Eric Lehman - Researcher in natural language processing and healthcare AI.">
+    <meta name="keywords" content="Eric Lehman, NLP, Clinical NLP, AI, Machine Learning">
+    <title>Eric Lehman</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .navbar-nav .nav-link {
+            font-family: 'Nunito', sans-serif;
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        .navbar-brand {
+            font-family: 'Nunito', sans-serif !important;
+            font-size: 25px !important;
+            color: #ffffff !important;
+            font-weight: 400 !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #dcdcdc; /* Slightly lighter color on hover for contrast */
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 1000px;
+        }
+        .navbar {
+            background-color: #34495e !important;
+        }
+        .main-image {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .icon-link {
+            color: #34495e;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 1.4em;
+            transition: color 0.3s ease;
+        }
+        .icon-link:hover {
+            color: #3498db;
+        }
+        .about-text {
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .news-item, .publication-item, .teaching-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        section#publications hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin-bottom: 20px;
+        }
+        section#teaching hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin-bottom: 20px; 
+        }
+        section#news hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #34495e;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 24px;
+            line-height: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #back-to-top:hover {
+            background-color: #2c3e50;
+        }
+    </style>
 </head>
+
 <body>
-
-
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="#publications">Publications</a></li> 
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
-                <!-- Main Image -->
-                <img class="img-responsive" src="me.jpg" alt=""  width="50%" max-height="10%"><br>
-                
-                <div style="margin-top:3%; text-align:justify;">   
-                  <!-- <img src="me.jpg" width="50%" max-height="10%"> </img>              -->
-                  <p>I am a PhD student at MIT working who focuses on NLP research. 
-                    I generally focus on how NLP can be applied in the medical field, 
-                    although I'm happy to work on more general healthcare related machine learning projects!
-                  </p>
-                </div>
-            </div> 
-
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Eric Lehman</b></div><br>
-                <p><b>lehmer16 at mit.edu</b><br>
-                <p>MIT CSAIL </p>
-                </p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="https://scholar.google.com/citations?user=dmmIl0IAAAAJ&hl=en">Google Scholar</a></dd> 
-              <dd><a href="https://twitter.com/home">Twitter</a></dd>
-            </div>
-            
-            
-            <!-- Publications -->
-            <div class="col-md-8" style="height: 100vh;">    
-                <h2 id="publications">Selected Publications</h2>
-                <ul>
-                  <li class="paper" words="">
-                    <a href="https://arxiv.org/abs/2104.07762" target="_blank">Does BERT Pretrained on Clinical Notes Reveal Sensitive Data?</a>
-                  </li>
-                  <li class="paper" words="">
-                    <a href="https://arxiv.org/abs/1904.01606" target="_blank">Inferring Which Medical Treatments Work from Reports of Clinical Trials</a>
-                  </li>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Eric Lehman</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#teaching">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CV_EL_github.pdf" target="_blank">CV</a>
+                    </li>
                 </ul>
             </div>
-
-            
         </div>
+    </nav>
 
+    <!-- Page Content -->
+    <div class="container my-5">
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="row">
+                <div class="col-lg-4 text-center">
+                    <img src="me.jpg" alt="Eric Lehman" class="img-fluid mb-3">
+                    <div class="about-text">
+                      <span style="font-size: 1.2rem; color: #34495e;">Head of Clinical NLP</span><br>
+                      <span style="font-size: 1.2rem; color: #34495e;">OpenEvidence</span>
+                  </div>
+                    <!-- Social Icons -->
+                    <div class="social-icons mt-3" style="margin-bottom: 10%;">
+                        <a href="https://scholar.google.com/citations?user=dmmIl0IAAAAJ&hl=en" class="icon-link" target="_blank" title="Google Scholar">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://twitter.com/lehmer16" class="icon-link" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/elehman16" class="icon-link" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:lehmer16@mit.edu" class="icon-link" title="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <h1>About Me</h1>
+                    <p style="font-size: 1.2rem;">
+                      My research focuses on the practical deployment of large language models (LLMs) in healthcare settings. I am passionate about understanding how to safely deploy these incredible models to augment clinical decision-making. Specifically, I aim to answer questions such as:
+                        <ul style="font-size: 1.2rem;">
+                          <li>How can we effectively build accurate LLM-based systems?</li>
+                          <li>How can we ensure that these models are safe and fair?</li>
+                          <li>What does it mean for these models to be trustworthy?</li>
+                        </ul>
+                    </p>
+                    <p style="font-size: 1.2rem;">
+                      To address these questions, I currently serve as the Head of Clinical NLP at OpenEvidence, where I oversee ClinicalKey AI, a retrieval augmented generation (RAG) tool that is <i>already</i> being used in several hospital systems! I recently graduated from MIT in May of 2024, where I was advised by amazing Peter Szolovits. Prior to that, I worked with the fantastic Byron Wallace at Northeastern University.
+                    </p>
 
+                    <!-- Education Section -->
+                    <div class="education">
+                      <h2>Education</h2>
+                      <ul style="list-style-type: none; padding: 0; margin-left: 10px;">
+                          <li>
+                              <i class="fa-solid fa-graduation-cap" style="color: #2c3e50; margin-right: 8px;"></i>
+                              <strong>Ph.D. in Computer Science</strong><br>
+                              Massachusetts Institute of Technology, 2024
+                          </li>
+                          <li>
+                              <i class="fa-solid fa-graduation-cap" style="color: #2c3e50; margin-right: 8px;"></i>
+                              <strong>M.S. in Computer Science</strong><br>
+                              Massachusetts Institute of Technology, 2022
+                          </li>
+                          <li>
+                              <i class="fa-solid fa-graduation-cap" style="color: #2c3e50; margin-right: 8px;"></i>
+                              <strong>B.S. in Computer Science</strong><br>
+                              Northeastern University, 2016
+                          </li>
+                      </ul>
+                  </div>
+      
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section">
+            <h2>News</h2>
+            <hr>
+            <div class="news-item">
+                <h3>Ph.D. Defense Completed</h3>
+                <p><strong>May 1st, 2024</strong> &mdash; Successfully defended my Ph.D. thesis on <i>"Practical Considerations For the Deployment of Clinical NLP Systems"</i> at MIT, advised by the incredible Peter Szolovits!</p>
+            </div>
+
+            <div class="news-item">
+              <h3>Best Paper Award at CHIL 2023</h3>
+              <p><strong>June 23rd, 2023</strong> &mdash; We won best paper at <a href="https://x.com/CHILconference/status/1672305306011852800" target="_blank">CHIL 2023</a>.</p>
+            </div>
+
+            <div class="news-item">
+              <h3>Joined OpenEvidence as Head of Clinical NLP</h3>
+              <p><strong>July 1, 2022</strong> &mdash; Excited to announce that I've joined OpenEvidence to lead their Clinical NLP research team.</p>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+          <h2>Selected Publications</h2>
+          <hr>
+
+          <div class="publication-item">
+            <p>Travis Zack*, <strong>Eric Lehman*</strong>, Mirac Suzgun, Jorge A Rodriguez, Leo Anthony Celi, Judy Gichoya, Dan Jurafsky, Peter Szolovits, David W Bates, Raja-Elie E Abdulnour, Atul Butte, Emily Alsentzer. <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(23)00225-X/fulltext" target="_blank">Assessing the Potential of GPT-4 To Perpetuate Racial and Gender Biases in Health Care: A Model Evaluation Study</a>, <em>Lancet Digital Health</em>, 2023.</p>
+          </div>
+
+          <div class="publication-item">
+            <p><strong>Eric Lehman</strong>, Evan Hernandez, Diwakar Mahajan, Jonas Wulff, Micah J Smith, Zachary Ziegler, Daniel Nadler, Peter Szolovits, Alistair Johnson, Emily Alsentzer. <a href="https://arxiv.org/abs/2302.08091" target="_blank">Do We Still Need Clinical Language Models?</a>, <em>Conference on Health, Inference, and Learning (CHIL), 2023.</em></p>
+          </div>
+
+          <div class="publication-item">
+              <p><strong>Eric Lehman</strong>*, Sarthak Jain*, Karl Pichotta, Yoav Goldberg, Byron C. Wallace." <a href="https://arxiv.org/abs/2104.07762" target="_blank">Does BERT Pretrained on Clinical Notes Reveal Sensitive Data?</a>, <em>North American Chapter of the Association for Computational Linguistics (NAACL), 2021.</em></p>
+          </div>
+
+          <div class="publication-item">
+              <p><strong>Eric Lehman</strong>, Jay DeYoung, Regina Barzilay, Byron C. Wallace." <a href="https://arxiv.org/abs/1904.01606" target="_blank">Inferring Which Medical Treatments Work from Reports of Clinical Trials</a>, <em>North American Chapter of the Association for Computational Linguistics (NAACL), 2019.</em></p>
+          </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching" class="section">
+            <h2>Teaching</h2>
+            <hr>
+            <div class="teaching-item">
+              <h3>Summer Research Mentor</h3>
+              <strong>Summer 2023, MIT, <i>Mentor</i></strong><br>
+              I worked closely with a Summer research intern on exploring and collecting bias datasets for testing LLMs in healthcare settings. This was also an incredibly fun learning experience. Thank you Weston!
+            </div>
+
+            <div class="teaching-item">
+                <h3>Machine Learning for Healthcare</h3>
+                <strong>Spring 2023, MIT, <i>Teaching Assistant</i></strong><br>
+                A very fun graduate level course on machine learning in healthcare. I designed the syllabus, graded homeworks, held and planned recitations, wrote the final exam, and held weekly office hours. It was an incredible experience to teach this course!
+            </div>
+            <div class="teaching-item">
+                <h3>Fundamentals of Computer Science 1</h3>
+                <strong>Spring 2017, Northeastern University, <i>Tutor</i></strong><br>
+                Northeastern's introduction to computer science course. I held weekly office hours, graded homeworks, and helped students during recitation.
+            </div>
+        </section>
     </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
-</body>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to Top button functionality
+        var btn = document.getElementById("back-to-top");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+        btn.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
